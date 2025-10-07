@@ -183,9 +183,9 @@ section{
 .review-card .g-badge{
   position:absolute;
   right:20px;
-  top:12px;
-  width:28px;
-  height:28px;
+  top:20px;
+  width:35px;
+  height:35px;
   line-height:0;
   pointer-events:none;
   background:transparent;

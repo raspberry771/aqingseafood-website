@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function(){
 // Spotlight logic (blended list + bigger left meta + fade)
 (function(){
   const dishes = [
-    {zh:'蒸蟹',       en:'Steamed Crab',                            jp:'蒸しロブスター', img:'image/crabCream.png'},
-    {zh:'烤草蝦',     en:'Grilled Giant Tiger Shrimp',             jp:'蒸し カニ',       img:'image/shrimpfin4.jpeg'},
-    {zh:'黑鮪魚生魚片',   en:'Bluefin Tuna Sashimi', jp:'クロマグロ刺身',     img:'image/sashimiCream.png'},
-    {zh:'螃蟹味噌湯',   en:'Crab Miso Soup',                         jp:'カニ味噌汁',       img:'image/soup2.png'},
-    {zh:'螺肉生魚片', en:'Sliced Sea Whelk (Conch) Sashimi',                   jp:'つぶ貝刺身',   img:'image/snail2.png'},
+    {zh:'蒸蟹',       en:'Steamed Crab',                            jp:'蒸しロブスター', img:'image/spotlight-steamed-crab.png'},
+    {zh:'烤草蝦',     en:'Grilled Giant Tiger Shrimp',             jp:'蒸し カニ',       img:'image/spotlight-grilled-shrimp.jpeg'},
+    {zh:'黑鮪魚生魚片',   en:'Bluefin Tuna Sashimi', jp:'クロマグロ刺身',     img:'image/spotlight-sashimi.png'},
+    {zh:'螃蟹味噌湯',   en:'Crab Miso Soup',                         jp:'カニ味噌汁',       img:'image/spotlight-lobster-soup.png'},
+    {zh:'螺肉生魚片', en:'Sliced Sea Whelk (Conch) Sashimi',                   jp:'つぶ貝刺身',   img:'image/spotlight-seasnail.png'},
   ];
 
   const imgEl   = document.getElementById('spotlight-img');
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <div class="review-name">${nameHtml}</div>
             <div class="small text-secondary">${r.date}</div>
           </div>
-          <span class="g-badge" aria-label="Google review"><img src="image/gicon.png" alt=""></span>
+          <span class="g-badge" aria-label="Google review"><img src="image/google-review-logo.png" alt=""></span>
         </div>
         <div class="stars mb-2">★★★★★</div>
         <figcaption class="mb-0">${r.text}</figcaption>
