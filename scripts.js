@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function(){
 // Spotlight logic (blended list + bigger left meta + fade)
 (function(){
   const dishes = [
-    {zh:'蒸蟹',       en:'Steamed Crab',                            jp:'蒸しロブスター', img:'image/spotlight-steamed-crab.png'},
-    {zh:'烤草蝦',     en:'Grilled Giant Tiger Shrimp',             jp:'蒸し カニ',       img:'image/spotlight-grilled-shrimp.jpeg'},
-    {zh:'黑鮪魚生魚片',   en:'Bluefin Tuna Sashimi', jp:'クロマグロ刺身',     img:'image/spotlight-sashimi.png'},
-    {zh:'螃蟹味噌湯',   en:'Crab Miso Soup',                         jp:'カニ味噌汁',       img:'image/spotlight-lobster-soup.png'},
-    {zh:'螺肉生魚片', en:'Sliced Sea Whelk (Conch) Sashimi',                   jp:'つぶ貝刺身',   img:'image/spotlight-seasnail.png'},
+    {zh:'蒸蟹',       en:'Steamed Crab',                            jp:'蒸しロブスター', img:'image/donggang-steamed-crab.png'},
+    {zh:'烤草蝦',     en:'Grilled Giant Tiger Shrimp',             jp:'蒸し カニ',       img:'image/donggang-grilled-shrimp.jpeg'},
+    {zh:'黑鮪魚生魚片',   en:'Bluefin Tuna Sashimi', jp:'クロマグロ刺身',     img:'image/donggang-sashimi.png'},
+    {zh:'螃蟹味噌湯',   en:'Crab Miso Soup',                         jp:'カニ味噌汁',       img:'image/donggang-lobster-soup.png'},
+    {zh:'螺肉生魚片', en:'Sliced Sea Whelk (Conch) Sashimi',                   jp:'つぶ貝刺身',   img:'image/donggang-seasnail.png'},
   ];
 
   const imgEl   = document.getElementById('spotlight-img');

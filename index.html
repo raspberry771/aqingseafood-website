@@ -45,37 +45,86 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Preload the LCP hero image -->
+  <link rel="preload" as="image" href="/image/hero-steamed-crab.png">
+
+
   <!-- JSON-LD: Restaurant Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "阿慶鮮魚湯",
-    "servesCuisine": ["台式海鮮", "鮮魚湯"],
-    "url": "https://www.example.com/",
-    "telephone": "+886-8-831-2380",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "光復路241-9號",
-      "addressLocality": "新園鄉",
-      "addressRegion": "屏東縣",
-      "postalCode": "932",
-      "addressCountry": "TW"
-    },
-    "openingHoursSpecification": [{
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "阿慶鮮魚湯",
+  "alternateName": "A-Qing Seafood Restaurant",
+  "image": [
+    "https://aqingseafood.com/image/aqing-restaurant-exterior.png",
+    "https://aqingseafood.com/image/aqing-interior.png",
+    "https://aqingseafood.com/image/donggang-steamed-crab.png"
+  ],
+  "description": "阿慶鮮魚湯位於屏東東港鹽埔漁港旁，專賣在地現撈海鮮。創立逾20年，是東港在地人推薦的隱藏版美食與家庭聚餐熱門餐廳，也深受外地旅客與觀光客喜愛。",
+  "servesCuisine": ["海鮮料理", "台灣料理", "東港美食"],
+  "priceRange": "$$",
+  "url": "https://aqingseafood.com",
+  "telephone": "+886-8-831-2380",
+  "acceptsReservations": true,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "光復路241-9號",
+    "addressLocality": "新園鄉",
+    "addressRegion": "屏東縣",
+    "postalCode": "932",
+    "addressCountry": "TW"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.476033,
+    "longitude": 120.43836
+  },
+  "openingHoursSpecification": [
+    {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "10:30",
       "closes": "15:00"
-    },{
+    },
+    {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "17:00",
       "closes": "19:30"
-    }],
-    "sameAs": ["https://www.facebook.com/AChinSeafood/"]
-  }
-  </script>
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/AChinSeafood/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "773"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "黃小飄" },
+      "reviewBody": "早早到店用餐出餐迅速，角蝦鮮甜、軟殼蟹與西施貝都非常美味。用餐環境整潔、廁所乾淨，魚貨區擺放整齊，看了讓人舒服。老闆娘也很親切大方，是值得再訪的好店！",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "林杺宜" },
+      "reviewBody": "阿慶鮮魚湯真的是東港海鮮餐廳裡的隱藏版！所有料理都非常新鮮，我最喜歡黑鮪魚和大草蝦，蝦子又大又甜，超好吃！下次來東港一定會再訪。",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Selina Chen" },
+      "reviewBody": "老闆娘服務態度親切，餐點真的超好吃！每道料理的海鮮熟度都非常剛好😋 最推薦清燙草蝦、炸蚵仔、薑絲魚湯、肉燥飯、炒飯、鹽酥透抽、水蓮、金莎娃娃菜。",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
