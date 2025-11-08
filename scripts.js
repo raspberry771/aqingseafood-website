@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function(){
 // Spotlight logic (blended list + bigger left meta + fade)
 (function(){
   const dishes = [
-    {zh:'蒸蟹',       en:'Steamed Crab',                            jp:'蒸しロブスター', img:'image/donggang-steamed-crab.png'},
-    {zh:'烤草蝦',     en:'Grilled Giant Tiger Shrimp',             jp:'蒸し カニ',       img:'image/donggang-grilled-shrimp.jpeg'},
-    {zh:'黑鮪魚生魚片',   en:'Bluefin Tuna Sashimi', jp:'クロマグロ刺身',     img:'image/donggang-sashimi.png'},
-    {zh:'螃蟹味噌湯',   en:'Crab Miso Soup',                         jp:'カニ味噌汁',       img:'image/donggang-lobster-soup.png'},
-    {zh:'螺肉生魚片', en:'Sliced Sea Whelk (Conch) Sashimi',                   jp:'つぶ貝刺身',   img:'image/donggang-seasnail.png'},
+    {zh:'蒸蟹',       en:'Steamed Crab',                            jp:'蒸しロブスター', img:'image/donggang-steamed-crab.png', alt: '阿慶鮮魚湯招牌菜：清蒸螃蟹'},
+    {zh:'烤草蝦',     en:'Grilled Giant Tiger Shrimp',             jp:'蒸し カニ',       img:'image/donggang-grilled-shrimp.jpeg', alt: '鹽烤草蝦，阿慶鮮魚湯推薦的東港美食'},
+    {zh:'黑鮪魚生魚片',   en:'Bluefin Tuna Sashimi', jp:'クロマグロ刺身',     img:'image/donggang-sashimi.png', alt: '阿慶鮮魚湯的招牌東港生魚片，來自鹽埔漁港每日現撈'},
+    {zh:'螃蟹味噌湯',   en:'Crab Miso Soup',                         jp:'カニ味噌汁',       img:'image/donggang-lobster-soup.png', alt: '螃蟹味噌湯，阿慶鮮魚湯的暖胃湯品，東港海鮮餐廳必點'},
+    {zh:'螺肉生魚片', en:'Sliced Sea Whelk (Conch) Sashimi',                   jp:'つぶ貝刺身',   img:'image/donggang-seasnail.png', alt: '螺肉生魚片，阿慶鮮魚湯的東港隱藏版美食'},
   ];
 
   const imgEl   = document.getElementById('spotlight-img');
