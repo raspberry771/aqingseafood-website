@@ -18,8 +18,7 @@ h1,h2,h3,h4{
 
 /* ===== NAVBAR ===== */
 .navbar{
-  /* FIXED: Added space between 28px and rgba */
-  box-shadow:0 10px 28px rgba(0,0,0,.06);
+  box-shadow:0 10px 28pxrgba(0,0,0,.06);
   padding-top:.35rem;
   padding-bottom:.35rem;
 }
@@ -32,7 +31,7 @@ h1,h2,h3,h4{
   font-weight:600;
   color:#243b53;
   position:relative;
-  padding:.75rem 1rem;
+  padding:.75rem;
   border-radius:999px;
   transition:color .2s ease, background-color .2s ease;
 }
@@ -694,80 +693,145 @@ body.intro-lock{ overflow:hidden; }
   .collage .dish.shrimp { --x:58% !important; --y:68% !important; }
   .collage .dish.snail  { --x:2% !important; --y:2% !important; }
   .collage .dish.sashimi{ --x:-5% !important; --y:65% !important; --w:55% !important; }
- 
-} /* <-- FIXED: This closing bracket was the problem */
-
-/* ===== FAQ PAGE STYLES ===== */
-/* FIXED: This whole section was moved outside the media query above */
-.faq-header {
-  padding: 60px 0;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  scroll-margin-top: 120px;
 }
 
-.faq-content {
-  padding: 80px 0;
+
+/* ===== BLOG PAGE ===== */
+
+/* This is the main card container */
+.blog-card-vertical {
+  /* We can still add a hover effect to the main card */
+  transition: transform .3s ease, box-shadow .3s ease;
+  /* Use the .plate-card radius */
+  border-radius: 18px; 
 }
 
-.accordion-item {
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 18px !important;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
-  background: #fff;
-}
-.accordion-item:first-of-type,
-.accordion-item:last-of-type {
-  border-radius: 18px !important;
+/* Add hover effect to the card, not the link */
+.blog-card-vertical:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .09);
 }
 
-.accordion-header {
-  border-radius: 18px;
+/* Image on top */
+.blog-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  /* Round the top corners to match the .plate-card */
+  border-radius: 18px 18px 0 0;
 }
 
-.accordion-button {
-  font-family: 'Noto Serif TC', 'Inter', serif;
-  font-weight: 400;
-  font-size: 1.5rem;
+/* Blog post title link */
+.blog-title-link {
+  text-decoration: none;
   color: var(--ink);
-  background: #fff;
-  border-radius: 18px;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  transition: color .2s ease;
 }
-.accordion-button:not(.collapsed) {
+.blog-title-link:hover {
   color: var(--brand-red);
-  background: #fff;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.08);
-}
-.accordion-button:focus {
-  box-shadow: 0 0 0 0.25rem rgba(163, 23, 21, 0.25);
-  border-color: rgba(163, 23, 21, 0.5);
-}
-.accordion-button::after {
-
-  background-image: var(--bs-accordion-btn-icon);
-}
-.accordion-button:not(.collapsed)::after {
-  background-image: var(--bs-accordion-btn-active-icon);
-  transform: var(--bs-accordion-btn-icon-transform);
 }
 
-.accordion-body {
-  background: #fff;
-  padding: 0 1.25rem 1.25rem;
+/* Date/meta info */
+.blog-meta {
+  color: var(--muted);
+  display: flex; /* Aligns icon and text */
+  align-items: center;
+  font-size: 0.9rem;
 }
-.accordion-body p,
-.accordion-body ul,
-.accordion-body ol {
-  line-height: 1.8; 
-  color: #374151;
-  font-size: 1.15rem; 
+.blog-meta i {
+  margin-right: .35rem; /* Space after icon */
+  font-size: 0.85rem; /* Make icon match text */
 }
-.accordion-body ul,
-.accordion-body ol {
+
+/* "Read More" button style (from your screenshot) */
+.btn-read-more {
+  background: #5a626d; /* Dark gray */
+  border: 1px solid #5a626d;
+  color: #fff;
+  padding: .35rem .85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 600;
+  display: inline-block; /* Ensures padding is applied */
+  transition: all .2s ease;
+}
+.btn-read-more:hover {
+  background: #4a515a; /* Darken on hover */
+  border-color: #4a515a;
+  color: #fff;
+}
+/* ===== ARTICLE PAGE ===== */
+.article-header h1 {
+  line-height: 1.3; /* Tighter line height for big headings */
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--brand-red);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color .2s ease;
+}
+.back-link:hover {
+  text-decoration: underline;
+  color: #8a1311; /* Darker red on hover */
+}
+
+/* Main article text styling for readability */
+.article-body {
+  font-size: 1.1rem; /* Slightly larger text */
+  line-height: 1.75; /* More space between lines */
+  color: #374151; /* Softer than pure black */
+}
+.article-body p {
+  margin-bottom: 1.25rem;
+}
+
+/* Article headings (h2, h3) */
+.article-body h2 {
+  margin-top: 2.75rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  color: var(--ink);
+  /* Adds a subtle line below main headings */
+  border-bottom: 2px solid rgba(0,0,0,.08);
+  padding-bottom: .5rem;
+}
+.article-body h3 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+.article-body strong {
+  color: var(--ink); /* Make bold text stand out */
+}
+
+/* Article images */
+.article-image {
+  margin: 2rem 0;
+}
+.article-image img {
+  border-radius: 18px; /* Match .plate-card radius */
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  width: 100%; /* Ensure image is responsive */
+}
+.article-image figcaption {
+  color: var(--muted);
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Blockquotes for A-qing's quotes */
+.article-body blockquote {
+  border-left: 4px solid var(--brand-red);
   padding-left: 1.5rem;
-  margin-bottom: 0;
+  margin: 2rem 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-family: 'Noto Serif TC', serif;
+  color: #111;
+  font-weight: 600;
 }
