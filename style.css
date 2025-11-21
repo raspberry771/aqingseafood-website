@@ -712,13 +712,12 @@ body.intro-lock{ overflow:hidden; }
   box-shadow: 0 16px 40px rgba(0, 0, 0, .09);
 }
 
-/* Image on top */
 .blog-card-img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;        /* This forces the image to show its full natural height */
+  aspect-ratio: auto;  /* This deletes the old 16/9 restriction */
+  object-fit: contain; /* Ensures the whole image fits inside the box */
   display: block;
-  /* Round the top corners to match the .plate-card */
   border-radius: 18px 18px 0 0;
 }
 
